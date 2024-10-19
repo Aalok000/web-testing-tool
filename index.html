@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Vulnerability Testing Tool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Vulnerability Testing Tool</h1>
+        <form action="/" method="post">
+            <input type="text" name="url" placeholder="Enter website URL" required>
+            <input type="submit" value="Test Website">
+        </form>
+        {% if results %}
+        <div class="results">
+            <h2>Results:</h2>
+            <pre>{{ results }}</pre>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
